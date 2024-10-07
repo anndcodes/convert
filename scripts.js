@@ -1,6 +1,8 @@
-const USD = 4.87;
-const EUR = 5.32;
-const GBP = 6.08;
+const USD = 5.50;
+const EUR = 6.03;
+const GBP = 7.19;
+const JPY = 0.037;
+const CNY = 0.78;
 
 const form = document.querySelector("form");
 const amount = document.getElementById("amount");
@@ -27,6 +29,12 @@ form.onsubmit = (event) => {
       break;
     case "GBP":
       convertCurrency(amount.value, GBP, "£");
+      break;
+    case "JPY":
+      convertCurrency(amount.value, JPY, "¥");
+      break;
+    case "CNY":
+      convertCurrency(amount.value, CNY, "¥");
       break;
   }
 }
